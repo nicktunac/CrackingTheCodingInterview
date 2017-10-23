@@ -24,12 +24,10 @@ public class Q5_OneWay {
         System.out.println(oneAway("pales", "pale"));
         System.out.println(oneAway("pale", "bale"));
         System.out.println(oneAway("pale", "bake"));
+        System.out.println(oneAway("apple", "aple"));
     }
 
     static boolean oneAway(String s, String t) {
-
-        // Assumed that s is full string
-        // and t is the condition string
 
         int sLength = s.length();
         int tLength = t.length();
@@ -37,7 +35,6 @@ public class Q5_OneWay {
         if(Math.abs(sLength - tLength) > 1) 
             return false;
 
-        // Insert a character
         Map<Character, Boolean> map = new HashMap<>();
 
         for(int i = 0; i < sLength; i++) {
